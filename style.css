@@ -1,4 +1,129 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#about {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+figure {
+    position: relative;
+}
+
+figure img {
+    width: calc(100vw - 60px);
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px rgb(173, 173, 173);
+}
+
+figcaption { 
+    position: absolute;
+    color: white;
+    bottom: 30px;
+    font-size: 64px;
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.250);
+}
+
+#about h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 54px;
+    font-weight: normal;
+}
+
+#about p {
+    font-size: 24px;
+    color: rgb(87, 87, 87);
+    line-height: 1.4em;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+    body {
+        padding: 50px;
+    }
+
+    #about {
+        margin-top: 75px;
+        display: unset;
+    }
+
+    #about > div {
+        padding: 75px 20px 50px 20px;
+        background-color: white;
+        box-shadow: 1px 2px 4px 4px rgba(0, 0, 0, 0.171);
+    }
+
+    figcaption {
+        top: -100px;
+        right: 0px
+    }
+
+    figure img {
+        width: 400px;
+        height: 450px;
+        float: left;
+        margin: -120px 10px 10px -50px;
+    }
+}
+
+@media (min-width: 1023px) {
+
+    body {
+        margin: auto;
+        max-width: 1600px;
+        padding: 50px;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about > div {
+        padding: 35px 10px 25px 10px;
+        background-color: white;
+        box-shadow: 1px 2px 4px 4px rgba(0, 0, 0, 0.171);
+    }
+
+    figure img {
+        width: 400px;
+        height: 450px;
+    }
+
+    .icons {
+        margin-top: 20px;
+        justify-content: right;
+    }
+}
+
+
 
